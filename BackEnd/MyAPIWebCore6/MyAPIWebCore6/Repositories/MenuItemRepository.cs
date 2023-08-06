@@ -46,12 +46,13 @@ namespace MyAPIWebCore6.Repositories
 
         public async Task UpdateMenuItem(Guid id, MenuItemModel model)
         {
-            if(id == model.Id)
-            {
-                var menuItem = _mapper.Map<MenuItem>(model);
-                _menuStoreContext.MenuItems!.Update(menuItem);
-                await _menuStoreContext.SaveChangesAsync();
-            }
+              var menu =  _menuStoreContext.MenuItems!.FindAsync(id);
+                if(menu != null)
+                {
+                    var menuItem = _mapper.Map<MenuItem>(model);
+                    _menuStoreContext.MenuItems!.Update(menuItem);
+                    await _menuStoreContext.SaveChangesAsync();
+                }
         }
     }
 }

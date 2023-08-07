@@ -5,6 +5,8 @@ import axios from "axios";
 import useMergeState from "../../../customReactHook/useMergeState";
 import { useEffect, useState } from "react";
 import httpRequest from "../../../utils/httpRequest";
+import { useAppDispatch, useAppSelector } from "../../../store";
+import { MENU_LAYOUT } from "../../../reducer/zingSlice";
 
 type MenuItem = Required<MenuProps>["items"][number];
 type stateType = {
@@ -12,9 +14,10 @@ type stateType = {
   sidebar: any;
 };
 const Sidebar = () => {
+  const dispatch = useAppDispatch();
+  const menu = useAppSelector((state) => state.root.sideMenu);
   const [state, setState] = useMergeState({
     loading: true,
-    sideBar: [],
   });
 
   useEffect(() => {
@@ -24,7 +27,7 @@ const Sidebar = () => {
   const loadApi = async () => {
     await httpRequest
       .get("/menu")
-      .then((res) => setState({ sideBar: res.data }))
+      .then((res) => dispatch(MENU_LAYOUT(res.data)))
       .catch((err) => console.log(err));
   };
   console.log(state.sideBar);
@@ -42,7 +45,6 @@ const Sidebar = () => {
       label,
       type,
     } as MenuItem);
-  const items = [];
   return (
     <div className={classNames("side-bar")}>
       <Menu defaultSelectedKeys={["1"]} mode="inline" theme="dark" />

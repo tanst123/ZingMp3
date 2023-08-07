@@ -1,6 +1,6 @@
 import React from "react";
 
-const useMergeState = (initialState = {}) => {
+const useMergeState = (initialState: any = {}) => {
   const [value, setValue] = React.useState(initialState);
 
   const mergeState = (newState: any) => {

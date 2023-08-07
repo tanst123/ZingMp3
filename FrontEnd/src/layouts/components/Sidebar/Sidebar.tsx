@@ -3,10 +3,14 @@ import "./Sidebar.scss";
 import { Menu, MenuProps } from "antd";
 import axios from "axios";
 import useMergeState from "../../../customReactHook/useMergeState";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import httpRequest from "../../../utils/httpRequest";
 
 type MenuItem = Required<MenuProps>["items"][number];
-
+type stateType = {
+  loading: boolean;
+  sidebar: any;
+};
 const Sidebar = () => {
   const [state, setState] = useMergeState({
     loading: true,
@@ -14,18 +18,16 @@ const Sidebar = () => {
   });
 
   useEffect(() => {
-    setTimeout(() => {
-      loadApi();
-    }, 1000);
+    loadApi();
   }, []);
-  const loadApi = () => {
-    const url = process.env.REACT_APP_URL_API;
-    axios
-      .get(`${url}`)
-      .then((res) => console.log(res))
+
+  const loadApi = async () => {
+    await httpRequest
+      .get("/menu")
+      .then((res) => setState({ sideBar: res.data }))
       .catch((err) => console.log(err));
   };
-
+  console.log(state.sideBar);
   const getItem = (
     label: React.ReactNode,
     key: React.Key,

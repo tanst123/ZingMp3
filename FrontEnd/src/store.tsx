@@ -1,12 +1,13 @@
-import {configureStore} from "@reduxjs/toolkit";
-import {combineReducers} from "redux"
+import { configureStore } from "@reduxjs/toolkit";
+import { combineReducers } from "redux";
 import rootReducer from "./reducer/zingSlice";
 
 const reducer = combineReducers({
-    root: rootReducer
-})
+  root: rootReducer,
+});
 const store = configureStore({
-    reducer : reducer
-})
-
+  reducer: reducer,
+});
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
 export default store;

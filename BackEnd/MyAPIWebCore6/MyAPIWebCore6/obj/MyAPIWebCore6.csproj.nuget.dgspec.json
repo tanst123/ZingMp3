@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ReactJS\\ZingMp3\\BackEnd\\MyAPIWebCore6\\MyAPIWebCore6\\MyAPIWebCore6.csproj": {}
+    "d:\\ReactJS\\ZingMp3\\BackEnd\\MyAPIWebCore6\\MyAPIWebCore6\\MyAPIWebCore6.csproj": {}
   },
   "projects": {
-    "D:\\ReactJS\\ZingMp3\\BackEnd\\MyAPIWebCore6\\MyAPIWebCore6\\MyAPIWebCore6.csproj": {
+    "d:\\ReactJS\\ZingMp3\\BackEnd\\MyAPIWebCore6\\MyAPIWebCore6\\MyAPIWebCore6.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ReactJS\\ZingMp3\\BackEnd\\MyAPIWebCore6\\MyAPIWebCore6\\MyAPIWebCore6.csproj",
+        "projectUniqueName": "d:\\ReactJS\\ZingMp3\\BackEnd\\MyAPIWebCore6\\MyAPIWebCore6\\MyAPIWebCore6.csproj",
         "projectName": "MyAPIWebCore6",
-        "projectPath": "D:\\ReactJS\\ZingMp3\\BackEnd\\MyAPIWebCore6\\MyAPIWebCore6\\MyAPIWebCore6.csproj",
-        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "D:\\ReactJS\\ZingMp3\\BackEnd\\MyAPIWebCore6\\MyAPIWebCore6\\obj\\",
+        "projectPath": "d:\\ReactJS\\ZingMp3\\BackEnd\\MyAPIWebCore6\\MyAPIWebCore6\\MyAPIWebCore6.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "d:\\ReactJS\\ZingMp3\\BackEnd\\MyAPIWebCore6\\MyAPIWebCore6\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -23,6 +23,7 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "http://pkg.idtek.com.vn/nuget/default-nuget/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

@@ -1,3 +1,8 @@
 .side-bar {
     background-color: var(--sidebar-backgroundColor);
+    li {
+        padding: 24px;
+        font-size: 14px;
+        font-weight: 500;
+    }
 }
